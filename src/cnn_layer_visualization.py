@@ -42,7 +42,7 @@ class CNNLayerVisualization():
         # Hook the selected layer
         self.hook_layer()
         # Generate a random image
-        random_image = cv2.imread('brain.jpg')
+        random_image = cv2.imread("brain.jpg")
         plt.imshow(random_image)
         plt.show()
         print(random_image.shape)
