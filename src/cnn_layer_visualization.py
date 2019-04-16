@@ -15,6 +15,7 @@ from misc_functions import preprocess_image, recreate_image, save_image
 import cv2
 import matplotlib.pyplot as plt
 
+
 class CNNLayerVisualization():
     """
         Produces an image that minimizes the loss of a convolution
@@ -41,12 +42,12 @@ class CNNLayerVisualization():
         # Hook the selected layer
         self.hook_layer()
         # Generate a random image
-        # random_image = np.uint8(np.random.uniform(150, 180, (224, 224, 3)))
-        # Process image and return variable
         random_image = cv2.imread('brain.jpg')
         plt.imshow(random_image)
         plt.show()
         print(random_image.shape)
+        # random_image = np.uint8(np.random.uniform(150, 180, (224, 224, 3)))
+        # Process image and return variable
         processed_image = preprocess_image(random_image, False)
         # Define optimizer for the image
         optimizer = Adam([processed_image], lr=0.1, weight_decay=1e-6)
