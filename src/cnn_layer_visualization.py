@@ -44,9 +44,9 @@ class CNNLayerVisualization():
         # Generate a random image
         # random_image = cv2.imread("brain.jpg")
         print("Just checking print")
-        if os.path.isfile("./brain.jpg"):
+        if os.path.isfile("brain.jpg"):
             print("The file " + "brain.jpg" + " does exist.")
-        random_image = cv2.imread("./brain.jpg")
+        random_image = cv2.imread("brain.jpg")
         plt.imshow(random_image)
         plt.show()
         print(random_image.shape)
