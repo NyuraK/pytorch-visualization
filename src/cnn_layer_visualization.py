@@ -10,7 +10,10 @@ import torch
 from torch.optim import Adam
 from torchvision import models
 
-from misc_functions import preprocess_image, recreate_image, save_image
+from src.misc_functions import preprocess_image, recreate_image, save_image
+
+import cv2
+import matplotlib.pyplot as plt
 
 
 class CNNLayerVisualization():
@@ -39,7 +42,11 @@ class CNNLayerVisualization():
         # Hook the selected layer
         self.hook_layer()
         # Generate a random image
-        random_image = np.uint8(np.random.uniform(150, 180, (224, 224, 3)))
+        random_image = cv2.imread('brain.jpg')
+        plt.imshow(random_image)
+        plt.show()
+        print(random_image.shape)
+        # random_image = np.uint8(np.random.uniform(150, 180, (224, 224, 3)))
         # Process image and return variable
         processed_image = preprocess_image(random_image, False)
         # Define optimizer for the image
