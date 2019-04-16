@@ -47,9 +47,9 @@ class CNNLayerVisualization():
             random_image = cv2.imread("brain.jpg")
         else:
             print("The file " + "brain.jpg" + " does not exist.")
-        plt.imshow(random_image)
-        plt.show()
-        print(random_image.shape)
+        # plt.imshow(random_image)
+        # plt.show()
+        # print(random_image.shape)
         # random_image = np.uint8(np.random.uniform(150, 180, (224, 224, 3)))
         # Process image and return variable
         processed_image = preprocess_image(random_image, False)
